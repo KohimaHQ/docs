@@ -1,28 +1,16 @@
 {
   "$schema": "https://mintlify.com/schema.json",
   "name": "Playbook",
-  "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
-  },
   "favicon": "/favicon.svg",
   "colors": {
-    "primary": "#0D9373",
-    "light": "#07C983",
-    "dark": "#0D9373",
-    "anchors": {
-      "from": "#0D9373",
-      "to": "#07C983"
-    }
+    "primary": "#0D9373"
   },
   "navigation": [
     {
       "group": "Demo",
       "pages": [
-        "Introduction",
-        "UseCases"
-               ]
-      
+        "regulatory-analysis"
+      ]
     }
   ]
 }
