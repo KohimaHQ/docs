@@ -17,9 +17,9 @@
   },
   "navigation": [
     {
-      "group": "Get Started",
+      "group": "Demo",
       "pages": [
-        "introduction",
+        "RegAssist",
         "UseCases"
                ]
       
