@@ -1,29 +1,1055 @@
----
-title: "Knowledge Base"
-description: "Welcome to our playbook."
----
+# Regulatory Analysis Platform
 
-<img
-  alt="Hero Dark"
-  classname="hidden dark:block"
-  src="/images/hero-dark.svg"
-/>
+<div dangerouslySetInnerHTML={{
+  __html: `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regulatory Analysis Platform</title>
+    <style>
+        :root {
+            --color-primary: #DA020E;
+            --color-primary-dark: #B71C1C;
+            --text-primary: #1A1A1A;
+            --text-secondary: #4A4A4A;
+            --text-tertiary: #6B6B6B;
+            --text-success: #0D7F2E;
+            --text-error: #C41E3A;
+            --text-inverse: #FFFFFF;
+            --bg-primary: #FFFFFF;
+            --bg-secondary: #F8F9FA;
+            --bg-tertiary: #F1F3F4;
+            --space-sm: 8px;
+            --space-md: 16px;
+            --space-lg: 24px;
+            --space-xl: 32px;
+            --space-xxl: 48px;
+            --space-xxxl: 64px;
+            --font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+            --font-size-sm: 0.875rem;
+            --font-size-base: 1rem;
+            --font-size-lg: 1.125rem;
+            --font-size-xl: 1.25rem;
+            --font-size-2xl: 1.5rem;
+            --font-size-3xl: 2.25rem;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
 
-## Gen AI in Banking
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-kohima AI is an Automation and AI first consulting firm led by operating partners with strategy, execution and risk management experience over last 15 years at leading financial services, tech majors and startups.
+        body {
+            font-family: var(--font-family);
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
 
-<CardGroup cols={2}>
-  <Card title="Discovery Process" icon="palette" href="https://www.linkedin.com/posts/kohimaai_presence-of-a-rigorous-discovery-checklist-activity-7331090830293655553-v04B">
-    Customize your docs to your company's colors and brands
-  </Card>
-  <Card title="Reference APIs" icon="code" href="https://mintlify.com/docs/api-playground/openapi">
-    Automatically generate endpoints from an OpenAPI spec
-  </Card>
-  <Card title="Add Components" icon="screwdriver-wrench" href="https://mintlify.com/docs/components/accordion">
-    Build interactive features and designs to guide your users
-  </Card>
-  <Card title="Get Inspiration" icon="stars" href="https://mintlify.com/customers">
-    Check out our showcase of our favorite documentation
-  </Card>
-</CardGroup>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--space-xl) var(--space-lg);
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+            color: var(--text-inverse);
+            padding: var(--space-xxxl) var(--space-xl);
+            border-radius: 16px;
+            margin-bottom: var(--space-xl);
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0%, transparent 100%);
+        }
+
+        .header h1 {
+            font-size: var(--font-size-3xl);
+            font-weight: 700;
+            margin-bottom: var(--space-md);
+            position: relative;
+        }
+
+        .header p {
+            font-size: var(--font-size-lg);
+            opacity: 0.9;
+            position: relative;
+        }
+
+        .login-container {
+            background: var(--bg-primary);
+            border-radius: 12px;
+            padding: var(--space-xxxl);
+            box-shadow: var(--shadow-md);
+            max-width: 480px;
+            margin: 0 auto var(--space-xl);
+            border: 1px solid #E1E4E8;
+        }
+
+        .form-group {
+            margin-bottom: var(--space-lg);
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: var(--space-sm);
+            font-size: var(--font-size-sm);
+        }
+
+        .form-input {
+            width: 100%;
+            padding: var(--space-md) var(--space-lg);
+            border: 2px solid #E1E4E8;
+            border-radius: 8px;
+            font-size: var(--font-size-base);
+            color: var(--text-primary);
+            background: var(--bg-primary);
+            min-height: 56px;
+            transition: all 0.2s ease;
+            font-family: var(--font-family);
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 4px rgba(218, 2, 14, 0.08);
+        }
+
+        .form-input::placeholder {
+            color: var(--text-tertiary);
+        }
+
+        .form-info {
+            font-size: var(--font-size-sm);
+            color: var(--text-secondary);
+            margin-top: var(--space-sm);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--space-md) var(--space-xl);
+            border: none;
+            border-radius: 8px;
+            font-size: var(--font-size-base);
+            font-weight: 600;
+            font-family: var(--font-family);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            min-height: 56px;
+            text-decoration: none;
+            gap: var(--space-sm);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+            color: var(--text-inverse);
+            box-shadow: 0 4px 12px rgba(218, 2, 14, 0.15);
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, var(--color-primary-dark) 0%, #8B0000 100%);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px rgba(218, 2, 14, 0.2);
+        }
+
+        .btn-secondary {
+            background: var(--bg-primary);
+            color: var(--color-primary);
+            border: 2px solid var(--color-primary);
+        }
+
+        .btn-secondary:hover {
+            background: #FFF5F5;
+            transform: translateY(-1px);
+        }
+
+        .btn-group {
+            display: flex;
+            gap: var(--space-md);
+            margin-top: var(--space-lg);
+        }
+
+        .main-interface {
+            display: none;
+        }
+
+        .main-interface.active {
+            display: block;
+        }
+
+        .user-info {
+            background: var(--bg-primary);
+            padding: var(--space-lg);
+            border-radius: 8px;
+            border: 1px solid #E1E4E8;
+            text-align: center;
+            margin-bottom: var(--space-xl);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .warning-banner {
+            background: #FFFBEB;
+            border: 1px solid #FBBF24;
+            border-left: 4px solid #B7470A;
+            border-radius: 8px;
+            padding: var(--space-lg);
+            margin: var(--space-lg) 0;
+            color: #B7470A;
+            font-weight: 500;
+        }
+
+        .query-section {
+            background: var(--bg-primary);
+            padding: var(--space-xl);
+            border-radius: 12px;
+            border: 1px solid #E1E4E8;
+            box-shadow: var(--shadow-sm);
+            margin-bottom: var(--space-xl);
+        }
+
+        .query-textarea {
+            width: 100%;
+            min-height: 120px;
+            padding: var(--space-lg);
+            border: 2px solid #E1E4E8;
+            border-radius: 8px;
+            font-size: var(--font-size-base);
+            font-family: var(--font-family);
+            color: var(--text-primary);
+            resize: vertical;
+            line-height: 1.6;
+        }
+
+        .query-textarea:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 4px rgba(218, 2, 14, 0.08);
+        }
+
+        .response-area {
+            background: var(--bg-primary);
+            border: 1px solid #E1E4E8;
+            border-radius: 12px;
+            padding: var(--space-xl);
+            min-height: 400px;
+            font-family: var(--font-family);
+            line-height: 1.7;
+            color: var(--text-primary);
+            box-shadow: var(--shadow-sm);
+            overflow-y: auto;
+            max-height: 800px;
+        }
+
+        .citation-block {
+            background: #F8F9FA;
+            border-left: 4px solid var(--color-primary);
+            margin: 24px 0;
+            padding: 20px 24px;
+            border-radius: 0 8px 8px 0;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .citation-header {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            font-size: var(--font-size-lg);
+        }
+
+        .citation-document {
+            color: var(--text-secondary);
+            font-size: var(--font-size-sm);
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+
+        .citation-text {
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .metadata-container {
+            background: var(--bg-tertiary);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 24px 0;
+            border: 1px solid #E1E4E8;
+        }
+
+        .metadata-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        .metadata-item {
+            background: var(--bg-primary);
+            padding: 12px 16px;
+            border-radius: 6px;
+            border: 1px solid #E1E4E8;
+            text-align: center;
+        }
+
+        .metadata-label {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+            font-size: var(--font-size-sm);
+        }
+
+        .metadata-value {
+            color: var(--text-secondary);
+            font-size: var(--font-size-base);
+        }
+
+        .examples-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-md);
+            margin: var(--space-lg) 0;
+        }
+
+        .example-btn {
+            background: var(--bg-primary);
+            border: 2px solid var(--color-primary);
+            color: var(--color-primary);
+            padding: var(--space-md);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: left;
+            font-size: var(--font-size-sm);
+        }
+
+        .example-btn:hover {
+            background: #FFF5F5;
+            transform: translateY(-1px);
+        }
+
+        .status-success {
+            background: #F0F9F4;
+            border: 1px solid #34D399;
+            border-left: 4px solid var(--text-success);
+            color: var(--text-success);
+            padding: var(--space-md) var(--space-lg);
+            border-radius: 8px;
+            margin: var(--space-md) 0;
+        }
+
+        .status-error {
+            background: #FEF2F2;
+            border: 1px solid #F87171;
+            border-left: 4px solid var(--text-error);
+            color: var(--text-error);
+            padding: var(--space-md) var(--space-lg);
+            border-radius: 8px;
+            margin: var(--space-md) 0;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            padding: var(--space-xl);
+            color: var(--text-secondary);
+        }
+
+        .loading.active {
+            display: block;
+        }
+
+        .spinner {
+            width: 32px;
+            height: 32px;
+            border: 3px solid #E1E4E8;
+            border-top: 3px solid var(--color-primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto var(--space-md);
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .accordion {
+            background: var(--bg-primary);
+            border: 1px solid #E1E4E8;
+            border-radius: 8px;
+            margin: var(--space-lg) 0;
+        }
+
+        .accordion-header {
+            padding: var(--space-lg);
+            cursor: pointer;
+            border-bottom: 1px solid #E1E4E8;
+            font-weight: 600;
+            user-select: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .accordion-content {
+            padding: var(--space-lg);
+            display: none;
+        }
+
+        .accordion.open .accordion-content {
+            display: block;
+        }
+
+        .accordion.open .accordion-header::after {
+            content: '−';
+        }
+
+        .accordion-header::after {
+            content: '+';
+            font-size: var(--font-size-lg);
+            font-weight: bold;
+        }
+
+        .footer {
+            text-align: center;
+            padding: var(--space-xl);
+            color: var(--text-secondary);
+            background: var(--bg-primary);
+            border-radius: 8px;
+            border: 1px solid #E1E4E8;
+            margin-top: var(--space-xl);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: var(--space-lg) var(--space-md);
+            }
+            
+            .header {
+                padding: var(--space-xl) var(--space-lg);
+            }
+            
+            .header h1 {
+                font-size: var(--font-size-2xl);
+            }
+            
+            .login-container {
+                padding: var(--space-xl);
+            }
+            
+            .btn-group {
+                flex-direction: column;
+            }
+            
+            .examples-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .metadata-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Login Interface -->
+        <div id="loginInterface" class="login-interface">
+            <div class="header">
+                <h1>🔐 Regulatory Analysis Platform</h1>
+                <p>AI-Powered Compliance Assistant</p>
+                <p style="font-size: 1rem; margin-top: 8px;">Template for Bank IT Integration</p>
+            </div>
+
+            <div class="login-container">
+                <h3 style="margin-bottom: 24px; color: var(--text-primary);">Authentication Required</h3>
+                
+                <div class="form-group">
+                    <label class="form-label" for="userId">User ID</label>
+                    <input 
+                        type="text" 
+                        id="userId" 
+                        class="form-input" 
+                        value="USER_001"
+                        placeholder="Enter your user identifier"
+                    >
+                    <div class="form-info">Default provided for demo purposes</div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="accessKey">Access Key</label>
+                    <input 
+                        type="password" 
+                        id="accessKey" 
+                        class="form-input" 
+                        placeholder="Enter access key"
+                    >
+                    <div class="form-info">Demo keys: demo2024, template, poc</div>
+                </div>
+
+                <div class="btn-group">
+                    <button onclick="handleLogin()" class="btn btn-primary">
+                        🔑 Login
+                    </button>
+                    <button onclick="clearLogin()" class="btn btn-secondary">
+                        🧹 Clear
+                    </button>
+                </div>
+
+                <div id="loginStatus" style="margin-top: 16px; font-weight: 500;">
+                    <strong>Status:</strong> Ready to authenticate
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Interface -->
+        <div id="mainInterface" class="main-interface">
+            <!-- User Info -->
+            <div id="userInfo" class="user-info">
+                <!-- User info will be populated here -->
+            </div>
+
+            <div class="header">
+                <h1>🔐 Regulatory Analysis Platform</h1>
+                <p>Expert guidance on regulatory standards with comprehensive citations</p>
+            </div>
+
+            <div class="warning-banner">
+                <strong>⚠️ Important Disclaimer:</strong> This AI assistant provides guidance based on regulations but should not replace professional legal or compliance advice. Always verify critical compliance decisions with qualified experts.
+            </div>
+
+            <!-- System Information Accordion -->
+            <div class="accordion" onclick="toggleAccordion(this)">
+                <div class="accordion-header">
+                    🔧 System Information
+                </div>
+                <div class="accordion-content">
+                    <h4>Technology Stack</h4>
+                    <ul>
+                        <li><strong>Backend API:</strong> Advanced RAG (Retrieval-Augmented Generation) system</li>
+                        <li><strong>Vector Database:</strong> Qdrant for semantic search across regulations</li>
+                        <li><strong>AI Models:</strong> Claude 3.5 Haiku with Groq LLaMA 8B fallback</li>
+                        <li><strong>Search:</strong> Optimized embedding models with cross-encoder reranking</li>
+                        <li><strong>Citations:</strong> Adaptive selection with full regulatory text</li>
+                        <li><strong>Authentication:</strong> Frontend template for Bank IT integration</li>
+                    </ul>
+                    
+                    <h4>Key Features</h4>
+                    <ul>
+                        <li>🎯 <strong>Expert Analysis:</strong> Responds as a senior operations risk expert</li>
+                        <li>📚 <strong>Full Citations:</strong> Complete regulatory text with source references</li>
+                        <li>⚡ <strong>Fast Response:</strong> Optimized for quick, accurate analysis</li>
+                        <li>🔄 <strong>Reliable:</strong> Multiple AI providers ensure system availability</li>
+                        <li>📊 <strong>Confident Scoring:</strong> Quality assessment for each response</li>
+                        <li>🔐 <strong>Secure Template:</strong> Authentication ready for bank integration</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Query Section -->
+            <div class="query-section">
+                <div class="form-group">
+                    <label class="form-label" for="questionInput">🤔 Your Regulatory Question</label>
+                    <textarea 
+                        id="questionInput" 
+                        class="query-textarea"
+                        placeholder="Enter your question about operational risk, business continuity, outsourcing, or related prudential standards..."
+                    ></textarea>
+                    <div class="form-info">💡 Tip: Be specific about your scenario for more targeted analysis</div>
+                </div>
+
+                <div class="btn-group">
+                    <button onclick="submitQuestion()" class="btn btn-primary" id="submitBtn">
+                        🔍 Analyze Requirements
+                    </button>
+                    <button onclick="clearAll()" class="btn btn-secondary">
+                        🧹 Clear
+                    </button>
+                </div>
+            </div>
+
+            <!-- Example Questions -->
+            <div class="accordion open" onclick="toggleAccordion(this)">
+                <div class="accordion-header">
+                    💡 Example Questions
+                </div>
+                <div class="accordion-content">
+                    <p><strong>Click any example to automatically analyze it:</strong></p>
+                    <div class="examples-grid">
+                        <div class="example-btn" onclick="runExample(this)">📌 Advise on operational risk profile assessment for a material service provider.</div>
+                        <div class="example-btn" onclick="runExample(this)">📌 Develop a detailed outsourcing review checklist aligned with APRA requirements.</div>
+                        <div class="example-btn" onclick="runExample(this)">📌 What ongoing reviews we need to conduct?</div>
+                        <div class="example-btn" onclick="runExample(this)">📌 What are the business continuity planning requirements?</div>
+                        <div class="example-btn" onclick="runExample(this)">📌 When must we notify APRA of a service disruption?</div>
+                        <div class="example-btn" onclick="runExample(this)">📌 Advise on service provider management policy.</div>
+                        <div class="example-btn" onclick="runExample(this)">📌 Create a note for the board on responsibility of senior management.</div>
+                        <div class="example-btn" onclick="runExample(this)">📌 Name top 10 areas for risk review.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Response Area -->
+            <div class="response-area" id="responseArea">
+                <strong>Ready to assist!</strong> Ask any question about regulatory standards to get started.
+            </div>
+
+            <!-- Loading State -->
+            <div class="loading" id="loadingState">
+                <div class="spinner"></div>
+                <p>Analyzing regulatory requirements...</p>
+            </div>
+
+            <!-- Logout -->
+            <div style="text-align: right; margin-top: 24px;">
+                <button onclick="handleLogout()" class="btn btn-secondary">
+                    🚪 Logout
+                </button>
+            </div>
+
+            <div class="footer">
+                <p><strong>Regulatory Analysis Platform</strong> | AI-Powered Compliance Assistant</p>
+                <p>🚀 <em>Template for Bank IT Integration</em></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Configuration
+        const STREAM_API_URL = "https://amrendra-fs-MattBE.hf.space/query/stream";
+        const DEMO_KEYS = ["demo2024", "template", "poc"];
+
+        // Authentication Functions
+        function handleLogin() {
+            const userId = document.getElementById('userId').value;
+            const accessKey = document.getElementById('accessKey').value;
+            const statusDiv = document.getElementById('loginStatus');
+
+            if (!userId || !accessKey) {
+                statusDiv.innerHTML = '<div class="status-error"><strong>❌ Status:</strong> Please enter both User ID and Access Key</div>';
+                return;
+            }
+
+            if (DEMO_KEYS.includes(accessKey.toLowerCase())) {
+                const sessionData = {
+                    authenticated: true,
+                    user_id: userId,
+                    login_timestamp: new Date().toISOString(),
+                    session_id: 'sess_' + Math.random().toString(36).substr(2, 8)
+                };
+
+                statusDiv.innerHTML = '<div class="status-success"><strong>✅ Status:</strong> Login successful</div>';
+                
+                document.getElementById('userInfo').innerHTML = 
+                    '<strong>🟢 Authenticated User</strong><br>' +
+                    '<strong>User ID:</strong> ' + sessionData.user_id + '<br>' +
+                    '<strong>Session:</strong> ' + sessionData.session_id + '<br>' +
+                    '<strong>Login Time:</strong> ' + sessionData.login_timestamp.substr(0, 19);
+
+                setTimeout(() => {
+                    document.getElementById('loginInterface').style.display = 'none';
+                    document.getElementById('mainInterface').classList.add('active');
+                }, 1000);
+            } else {
+                statusDiv.innerHTML = '<div class="status-error"><strong>❌ Status:</strong> Invalid access key</div>';
+            }
+        }
+
+        function handleLogout() {
+            document.getElementById('loginInterface').style.display = 'block';
+            document.getElementById('mainInterface').classList.remove('active');
+            document.getElementById('loginStatus').innerHTML = '<strong>Status:</strong> Logged out successfully';
+            clearLogin();
+        }
+
+        function clearLogin() {
+            document.getElementById('userId').value = 'USER_001';
+            document.getElementById('accessKey').value = '';
+        }
+
+        // Query Functions
+        async function submitQuestion() {
+            const question = document.getElementById('questionInput').value;
+            if (!question.trim()) {
+                document.getElementById('responseArea').innerHTML = '⚠️ <strong>Please enter a question.</strong> Type your regulatory question above and click Analyze.';
+                return;
+            }
+
+            const startTime = performance.now();
+            document.getElementById('loadingState').classList.add('active');
+            document.getElementById('responseArea').innerHTML = '';
+
+            // Try multiple methods
+            const methods = [
+                {
+                    name: 'POST JSON',
+                    config: {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ question: question })
+                    }
+                },
+                {
+                    name: 'GET Query',
+                    config: {
+                        method: 'GET'
+                    },
+                    url: STREAM_API_URL + '?question=' + encodeURIComponent(question)
+                },
+                {
+                    name: 'POST Form',
+                    config: {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                        body: 'question=' + encodeURIComponent(question)
+                    }
+                }
+            ];
+
+            for (let method of methods) {
+                try {
+                    console.log('Trying ' + method.name + '...');
+                    const url = method.url || STREAM_API_URL;
+                    const response = await fetch(url, method.config);
+
+                    if (response.ok) {
+                        console.log('✅ ' + method.name + ' worked!');
+                        await processResponse(response, startTime);
+                        return;
+                    } else {
+                        console.log('❌ ' + method.name + ' failed: ' + response.status);
+                    }
+                } catch (error) {
+                    console.log('❌ ' + method.name + ' error:', error.message);
+                }
+            }
+
+            // If all methods fail, show demo response
+            showDemoResponse(startTime);
+        }
+
+        async function processResponse(response, startTime) {
+            try {
+                const reader = response.body.getReader();
+                const decoder = new TextDecoder();
+                let answer = '';
+                let citations = [];
+                let fullCitations = [];
+                let metadata = {};
+                let buffer = ''; // Buffer for incomplete JSON
+
+                while (true) {
+                    const { done, value } = await reader.read();
+                    if (done) break;
+
+                    const chunk = decoder.decode(value, { stream: true });
+                    buffer += chunk; // Add to buffer
+                    
+                    const lines = buffer.split('\\n');
+                    // Keep the last incomplete line in buffer
+                    buffer = lines.pop() || '';
+
+                    for (let line of lines) {
+                        if (line.startsWith('data: ')) {
+                            try {
+                                const rawData = line.slice(6).trim();
+                                if (!rawData) continue; // Skip empty data lines
+                                
+                                console.log('Processing JSON line, length:', rawData.length);
+                                
+                                // Handle large JSON responses that might be split
+                                const data = JSON.parse(rawData);
+                                console.log('Parsed data object:', data.type || 'unknown type');
+                                
+                                if (data.type === 'chunk') {
+                                    answer += data.content || '';
+                                    updateResponseArea(formatMarkdown(answer));
+                                } else if (data.type === 'final') {
+                                    console.log('=== FINAL DATA ANALYSIS ===');
+                                    console.log('All data keys:', Object.keys(data));
+                                    console.log('Citations field:', data.citations ? data.citations.length : 0, 'items');
+                                    console.log('Full_citations field:', data.full_citations ? data.full_citations.length : 0, 'items');
+                                    console.log('Provider field:', data.provider);
+                                    console.log('Confidence field:', data.confidence);
+                                    console.log('Processing_time field:', data.processing_time);
+                                    console.log('=== END ANALYSIS ===');
+                                    
+                                    citations = data.citations || [];
+                                    fullCitations = data.full_citations || [];
+                                    
+                                    // Enhanced metadata parsing from your rich backend response
+                                    metadata = {
+                                        confidence: data.confidence || 'unknown',
+                                        provider: data.provider || 'unknown',
+                                        processing_time: data.processing_time || ((performance.now() - startTime) / 1000),
+                                        citation_count: data.citation_count || citations.length,
+                                        unique_documents: data.unique_documents || [],
+                                        total_chunks: data.total_chunks || 0,
+                                        version: data.metadata?.version || 'unknown',
+                                        search_params: data.metadata?.search_params || {},
+                                        optimization_level: data.optimization_metrics?.level || 'unknown'
+                                    };
+                                    
+                                    console.log('Final data received:', {
+                                        answerLength: answer.length,
+                                        citations: citations.length,
+                                        fullCitations: fullCitations.length,
+                                        metadata: metadata
+                                    });
+                                    
+                                    displayFinalResponse(answer, citations, fullCitations, metadata);
+                                } else {
+                                    console.log('Other data type received:', data.type, Object.keys(data));
+                                }
+                            } catch (e) {
+                                console.log('JSON parse error:', e.message, 'Line length:', line.length);
+                                console.log('Problematic line start:', line.substring(0, 200), '...');
+                                // Don't break - continue processing other lines
+                            }
+                        }
+                    }
+                }
+                
+                // Process any remaining data in buffer
+                if (buffer.trim()) {
+                    console.log('Processing remaining buffer data...');
+                    try {
+                        const remainingData = buffer.startsWith('data: ') ? buffer.slice(6) : buffer;
+                        if (remainingData.trim()) {
+                            const data = JSON.parse(remainingData);
+                            if (data.type === 'final') {
+                                citations = data.citations || [];
+                                fullCitations = data.full_citations || [];
+                                metadata = {
+                                    confidence: data.confidence || 'unknown',
+                                    provider: data.provider || 'unknown',
+                                    processing_time: data.processing_time || ((performance.now() - startTime) / 1000),
+                                    citation_count: data.citation_count || citations.length
+                                };
+                                displayFinalResponse(answer, citations, fullCitations, metadata);
+                            }
+                        }
+                    } catch (e) {
+                        console.log('Final buffer parse error:', e.message);
+                    }
+                }
+                
+            } catch (error) {
+                console.error('Stream processing error:', error);
+                showDemoResponse(startTime);
+            } finally {
+                document.getElementById('loadingState').classList.remove('active');
+            }
+        }
+
+        function showDemoResponse(startTime) {
+            const processingTime = (performance.now() - startTime) / 1000;
+            const demoResponse = 
+                '<h2>📚 Business Continuity Planning Requirements (Demo Mode)</h2>' +
+                '<p>Under <strong>CPS230.16</strong>, your business continuity planning must be comprehensive and strategically integrated with your overall risk management framework.</p>' +
+                '<h3>Key Regulatory Framework</h3>' +
+                '<p>Under CPS230.18, your BCP must be seamlessly integrated into your overall risk management framework, ensuring that continuity planning does not conflict with your recovery and exit strategies.</p>' +
+                '<div class="citation-block">' +
+                '<div class="citation-header">CPS230.16 - Business Continuity Planning</div>' +
+                '<div class="citation-document">Document: APRA Prudential Standard CPS 230</div>' +
+                '<div class="citation-text">' +
+                'An APRA-regulated entity must develop, document and maintain a business continuity plan that addresses operational resilience across its entire banking ecosystem. The plan must cover all critical operations and demonstrate the entity\\'s ability to maintain tolerance levels during severe but plausible scenarios.' +
+                '</div>' +
+                '</div>' +
+                '<div class="metadata-container">' +
+                '<h3 style="margin: 0 0 16px 0; color: var(--text-primary);">📊 Analysis Metrics</h3>' +
+                '<div class="metadata-grid">' +
+                '<div class="metadata-item">' +
+                '<div class="metadata-label">⚡ AI Model</div>' +
+                '<div class="metadata-value">Demo Mode</div>' +
+                '</div>' +
+                '<div class="metadata-item">' +
+                '<div class="metadata-label">🎯 Confidence</div>' +
+                '<div class="metadata-value">High</div>' +
+                '</div>' +
+                '<div class="metadata-item">' +
+                '<div class="metadata-label">⏱️ Response Time</div>' +
+                '<div class="metadata-value">' + processingTime.toFixed(1) + 's</div>' +
+                '</div>' +
+                '<div class="metadata-item">' +
+                '<div class="metadata-label">📚 Citations</div>' +
+                '<div class="metadata-value">3 regulatory references</div>' +
+                '</div>' +
+                '</div>' +
+                '</div>' +
+                '<div style="background: #E3F2FD; border: 1px solid #2196F3; border-left: 4px solid #2196F3; border-radius: 8px; padding: 16px; margin: 24px 0; color: #1565C0;">' +
+                '<strong>ℹ️ Demo Mode:</strong> Backend API connection failed. This is a sample response showing the interface functionality. To connect to your actual backend, please check the API endpoint and CORS configuration.' +
+                '</div>';
+            
+            document.getElementById('responseArea').innerHTML = demoResponse;
+            document.getElementById('loadingState').classList.remove('active');
+        }
+
+        function updateResponseArea(content) {
+            document.getElementById('responseArea').innerHTML = content;
+        }
+
+        function displayFinalResponse(answer, citations, fullCitations, metadata) {
+            let formatted = answer;
+
+            // Simple citations display - just regulation and text
+            if (fullCitations && fullCitations.length > 0) {
+                formatted += '\\n\\n---\\n\\n## 📚 **Regulatory Citations**\\n\\n';
+                
+                fullCitations.forEach((citation, i) => {
+                    const citation_text = citation.text || '';
+                    const citation_ref = citation.citation || ('Citation ' + (i + 1));
+                    
+                    formatted += '<div class="citation-block">';
+                    formatted += '<div class="citation-header">' + citation_ref.toUpperCase() + ': </div>';
+                    formatted += '<div class="citation-text">' + citation_text + '</div>';
+                    formatted += '</div>\\n\\n';
+                });
+                
+            } else if (citations && citations.length > 0) {
+                formatted += '\\n\\n---\\n\\n## 📋 **Citations**\\n\\n';
+                formatted += 'Referenced regulations: ' + citations.join(', ');
+            }
+
+            // Minimal metadata - only 3 essential items
+            formatted += '\\n\\n---\\n\\n';
+            formatted += '**⚡ AI Model:** ' + formatProviderName(metadata.provider || 'unknown') + '\\n\\n';
+            formatted += '**🎯 Confidence:** ' + ((metadata.confidence || 'unknown').charAt(0).toUpperCase() + (metadata.confidence || 'unknown').slice(1)) + '\\n\\n';
+            formatted += '**⏱️ Processing Time:** ' + (metadata.processing_time || 0).toFixed(1) + 's';
+
+            document.getElementById('responseArea').innerHTML = formatMarkdown(formatted);
+            
+            // Debug output
+            console.log('=== FINAL CITATION DEBUG ===');
+            console.log('Full citations count:', fullCitations ? fullCitations.length : 0);
+            if (fullCitations && fullCitations.length > 0) {
+                fullCitations.forEach((cit, i) => {
+                    console.log('  ' + (i + 1) + '. ' + cit.citation + ' - ' + (cit.text ? cit.text.length : 0) + ' chars');
+                });
+            }
+            console.log('=== END DEBUG ===');
+        }
+
+        function formatMarkdown(text) {
+            return text
+                .replace(/^### (.*$)/gim, '<h3 style="color: var(--text-primary); font-weight: 600; margin: 24px 0 16px 0; font-size: 1.125rem;">$1</h3>')
+                .replace(/^## (.*$)/gim, '<h2 style="color: var(--text-primary); font-weight: 600; margin: 32px 0 16px 0; font-size: 1.25rem; border-bottom: 2px solid #E1E4E8; padding-bottom: 8px;">$1</h2>')
+                .replace(/\\*\\*(.*?)\\*\\*/g, '<strong style="color: var(--text-primary); font-weight: 600;">$1</strong>')
+                .replace(/\\*(.*?)\\*/g, '<em style="color: var(--text-secondary); font-style: italic;">$1</em>')
+                .replace(/^[\\s]*\\* (.*$)/gim, '<li style="margin: 8px 0; line-height: 1.6;">$1</li>')
+                .replace(/(<li>.*<\\/li>)/gs, '<ul style="margin: 16px 0; padding-left: 32px; list-style-type: disc;">$1</ul>')
+                .replace(/^[\\s]*\\d+\\. (.*$)/gim, '<li style="margin: 8px 0; line-height: 1.6;">$1</li>')
+                .replace(/(<li>.*<\\/li>)/gs, '<ol style="margin: 16px 0; padding-left: 32px;">$1</ol>')
+                .replace(/\\n\\n/g, '</p><p style="margin: 16px 0; line-height: 1.7;">')
+                .replace(/^/, '<p style="margin: 16px 0; line-height: 1.7;">')
+                .replace(/$/, '</p>')
+                .replace(/---/g, '<hr style="border: none; height: 1px; background: linear-gradient(90deg, transparent, #D0D7DE, transparent); margin: 32px 0;">')
+                .replace(/\\n/g, '<br>');
+        }
+
+        function formatProviderName(provider) {
+            // Match your exact Gradio implementation
+            if (provider.toLowerCase().includes('groq')) {
+                return 'Groq LLaMA 8B';
+            } else if (provider.toLowerCase().includes('claude')) {
+                return 'Claude 3.5 Haiku';
+            } else {
+                return provider.replace(/[-_]/g, ' ').replace(/\\b\\w/g, l => l.toUpperCase());
+            }
+        }
+
+        function clearAll() {
+            document.getElementById('questionInput').value = '';
+            document.getElementById('responseArea').innerHTML = '<strong>Ready to assist!</strong> Ask any question about regulatory standards.';
+        }
+
+        function runExample(element) {
+            const exampleText = element.textContent.replace('📌 ', '');
+            document.getElementById('questionInput').value = exampleText;
+            submitQuestion();
+        }
+
+        function toggleAccordion(element) {
+            element.classList.toggle('open');
+        }
+
+        // Event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('userId').focus();
+        });
+
+        document.addEventListener('keydown', function(event) {
+            if (event.ctrlKey && event.key === 'Enter') {
+                event.preventDefault();
+                submitQuestion();
+            }
+            
+            if (event.key === 'Escape') {
+                clearAll();
+            }
+        });
+
+        document.getElementById('userId').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                document.getElementById('accessKey').focus();
+            }
+        });
+
+        document.getElementById('accessKey').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                handleLogin();
+            }
+        });
+
+        document.getElementById('questionInput').addEventListener('input', function() {
+            this.style.height = 'auto';
+            this.style.height = Math.min(this.scrollHeight, 300) + 'px';
+        });
+
+        // Error handling
+        window.addEventListener('error', function(event) {
+            console.error('Global error:', event.error);
+            document.getElementById('loadingState').classList.remove('active');
+        });
+
+        // Test backend connection on load
+        async function testBackendConnection() {
+            try {
+                const testUrl = STREAM_API_URL.replace('/query/stream', '/docs');
+                const response = await fetch(testUrl, { method: 'GET', mode: 'no-cors' });
+                console.log('Backend test completed');
+            } catch (error) {
+                console.log('Backend connection test failed:', error.message);
+            }
+        }
+
+        // Run backend test
+        setTimeout(testBackendConnection, 1000);
+    </script>
+</body>
+</html>
+`
+}} />
