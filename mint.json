@@ -3,15 +3,42 @@
   "name": "Gen AI in Australian Banking",
   "favicon": "/favicon.svg",
   "colors": {
-    "primary": "#0D9373"
+    "primary": "#0D9373",
+    "light": "#07C983", 
+    "dark": "#0D9373"
   },
+  "topbarLinks": [
+    {
+      "name": "Support",
+      "url": "mailto:support@kohima.com"
+    }
+  ],
+  "topbarCtaButton": {
+    "name": "Get Started",
+    "url": "https://huggingface.co/spaces/amrendra-fs/Law-assist"
+  },
+  "anchors": [
+    {
+      "name": "Regulatory Platform",
+      "icon": "shield-check",
+      "url": "https://huggingface.co/spaces/amrendra-fs/Law-assist"
+    },
+    {
+      "name": "BCP Intelligence",
+      "icon": "brain",
+      "url": "https://huggingface.co/spaces/amrendra-fs/BCP-meeting-intelligence"
+    }
+  ],
   "navigation": [
     {
-      "group": "Prototypes",
+      "group": "AI-Powered Compliance Solutions",
       "pages": [
         "regulatory-analysis",
         "bcp-meeting-intelligence"
       ]
     }
-  ]
+  ],
+  "footerSocials": {
+    "linkedin": "https://linkedin.com/company/kohima"
+  }
 }
