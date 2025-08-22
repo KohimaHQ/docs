@@ -10,7 +10,7 @@
   "topbarLinks": [
     {
       "name": "Support",
-      "url": "mailto:support@kohima.com"
+      "url": "mailto:info@kohimahq.com"
     }
   ],
   "topbarCtaButton": {
@@ -39,6 +39,6 @@
     }
   ],
   "footerSocials": {
-    "linkedin": "https://linkedin.com/company/kohima"
+    "linkedin": "https://www.linkedin.com/company/102006467"
   }
 }
