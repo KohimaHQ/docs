@@ -7,15 +7,9 @@
     "light": "#07C983", 
     "dark": "#0D9373"
   },
-  "topbarLinks": [
-    {
-      "name": "Contact Us",
-      "url": "https://kohimahq.com/contact_us/"
-    }
-  ],
   "topbarCtaButton": {
-    "name": "Get Started",
-    "url": "https://huggingface.co/spaces/amrendra-fs/Law-assist"
+    "name": "Contact Us",
+    "url": "https://kohimahq.com/contact_us/"
   },
   "anchors": [
     {
