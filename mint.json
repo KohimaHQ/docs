@@ -36,6 +36,12 @@
         "regulatory-analysis",
         "bcp-meeting-intelligence"
       ]
+    },
+    {
+      "group": "Resources",
+      "pages": [
+        "blog"
+      ]
     }
   ],
   "footerSocials": {
